@@ -1,0 +1,14 @@
+2026-07-08 09:12:58 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-07-08 09:12:58 | INFO     | app.services.semantic_cache_service:__init__:56 - 语义缓存初始化: max_size=200, threshold=0.98
+2026-07-08 09:12:58 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-07-08 09:13:29 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-07-08 09:13:39 | INFO     | app.services.chat_service:answer_stream:460 - Query rewrite: '西红柿里面富含什么营养元素' -> '西红柿里面富含什么营养元素'
+2026-07-08 09:14:02 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['番茄都含有哪些营养物质', '西红柿的营养价值主要体现在哪些方面', '吃西红柿能给身体补充什么营养']
+2026-07-08 09:14:03 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-07-08 09:14:03 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=211
+2026-07-08 09:14:03 | INFO     | app.services.chat_service:answer_stream:481 - 严格模式拒答(流式): 未找到足够依据（候选数为 0）
+2026-07-08 09:14:22 | INFO     | app.services.chat_service:answer_stream:460 - Query rewrite: '西红柿里面富含什么营养元素' -> '西红柿里面富含什么营养元素'
+2026-07-08 09:14:41 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['番茄含有哪些营养成分', '西红柿的营养价值体现在哪些方面', '吃西红柿能给身体补充什么营养']
+2026-07-08 09:14:42 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-07-08 09:14:46 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-07-08 09:14:52 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='西红柿里面富含什么营养元素...', queries=4, 候选=5, 最终=5

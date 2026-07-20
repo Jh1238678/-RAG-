@@ -1,0 +1,231 @@
+2026-06-25 14:18:55 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 14:32:59 | INFO     | __main__:init_db:16 - 开始初始化数据库...
+2026-06-25 14:32:59 | INFO     | __main__:init_db:23 - 数据库初始化完成: sqlite:///data/app.db
+2026-06-25 14:33:03 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 14:47:43 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:02:31 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:25:53 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:27:25 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:28:02 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:28:40 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:38 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:40 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:42 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:44 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:46 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:48 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:50 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:54 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\bf5f9e1d2c804c6691e3e3afcb493bc2.docx
+2026-06-25 15:29:54 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 15:29:55 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:29:57 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=d03c0822ba0e4c2192045aa97d882bfd, error=Cannot send a request, as the client has been closed.
+2026-06-25 15:29:57 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\8d36c739267d4977af0c03c4eb708257.docx
+2026-06-25 15:29:58 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 15:29:58 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:30:00 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=167d6d79bedf4197a6ff913456ad7cdc, error=Cannot send a request, as the client has been closed.
+2026-06-25 15:30:00 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\bf35a613db8a482b97e4b9b747a67302.docx
+2026-06-25 15:30:00 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 15:30:00 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:30:02 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=d0ed28dad34342c380b9bd99aafc6a27, error=Cannot send a request, as the client has been closed.
+2026-06-25 15:30:11 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:30:40 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:45:28 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:58:45 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=d0ed28dad34342c380b9bd99aafc6a27
+2026-06-25 15:58:46 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=167d6d79bedf4197a6ff913456ad7cdc
+2026-06-25 15:58:48 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=d03c0822ba0e4c2192045aa97d882bfd
+2026-06-25 15:58:53 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\1e5b9304eab14d8f920826431feaefd8.docx
+2026-06-25 15:58:54 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 15:58:54 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:58:54 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=a5cfdb0782074397b3f98faab7696c7d, error=No module named 'sentence_transformers'
+2026-06-25 15:59:05 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 15:59:15 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:00:15 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:15:02 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:17:45 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:17:47 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:17:49 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:22:27 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:27:41 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:49:52 | INFO     | app.parsers.markdown_parser:parse:18 - 开始解析 Markdown: data\uploads\3fa8a5f1de4640b5822791d831c684ba.md
+2026-06-25 16:49:52 | INFO     | app.parsers.markdown_parser:parse:33 - Markdown 解析完成: 498 字符, 4 个标题
+2026-06-25 16:49:52 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:49:52 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=a97b27ecfe364045a58c040be13c5fde, error=No module named 'sentence_transformers'
+2026-06-25 16:54:14 | INFO     | app.parsers.markdown_parser:parse:18 - 开始解析 Markdown: data\uploads\b591241307ce4d0886843a6762612e5c.md
+2026-06-25 16:54:14 | INFO     | app.parsers.markdown_parser:parse:33 - Markdown 解析完成: 498 字符, 4 个标题
+2026-06-25 16:54:14 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 16:54:24 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=da903c7824c84cfbae8c3f79a2f65289, error=[Errno 2] No such file or directory: 'C:\\Users\\Lenovo\\.cache\\huggingface\\hub\\models--BAAI--bge-small-zh-v1.5\\snapshots\\7999e1d3359715c523056ef9478215996d62a620\\.\\config_sentence_transformers.json'
+2026-06-25 17:22:56 | INFO     | app.parsers.markdown_parser:parse:18 - 开始解析 Markdown: data\uploads\fbe8fefcda52454d98ced199234db8c4.md
+2026-06-25 17:22:56 | INFO     | app.parsers.markdown_parser:parse:33 - Markdown 解析完成: 498 字符, 4 个标题
+2026-06-25 17:22:56 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:23:11 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:23:12 | INFO     | app.services.vector_service:_ensure_index:49 - 创建新 FAISS 索引，维度=512
+2026-06-25 17:23:12 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=d66a1bf6774a4ba89332f31ffcbfc0e6, chunks=1
+2026-06-25 17:23:25 | WARNING  | app.services.llm_service:_ensure_client:26 - LLM_API_KEY 未配置，LLM 调用将失败
+2026-06-25 17:23:25 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-chat
+2026-06-25 17:23:25 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=d66a1bf6774a4ba89332f31ffcbfc0e6, tokens=456
+2026-06-25 17:23:32 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:23:34 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:23:38 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:23:46 | WARNING  | app.services.llm_service:_ensure_client:26 - LLM_API_KEY 未配置，LLM 调用将失败
+2026-06-25 17:23:46 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-chat
+2026-06-25 17:23:46 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=d66a1bf6774a4ba89332f31ffcbfc0e6, tokens=456
+2026-06-25 17:23:53 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:23:55 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:23:59 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:04 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=d66a1bf6774a4ba89332f31ffcbfc0e6, tokens=456
+2026-06-25 17:24:05 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:07 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:11 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:21 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=d66a1bf6774a4ba89332f31ffcbfc0e6, tokens=456
+2026-06-25 17:24:21 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:23 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:24:27 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:25:53 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=a97b27ecfe364045a58c040be13c5fde
+2026-06-25 17:25:57 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=da903c7824c84cfbae8c3f79a2f65289
+2026-06-25 17:26:02 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 17:32:37 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 17:32:49 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=a5cfdb0782074397b3f98faab7696c7d
+2026-06-25 17:32:53 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\85037c28a7cb438281c467b04d936a7a.docx
+2026-06-25 17:32:53 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 17:32:53 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 17:32:53 | ERROR    | app.services.document_service:ingest:145 - 文档入库失败: id=810ee4f1874749c28527c0f77cabe6e6, error=No module named 'sentence_transformers'
+2026-06-25 17:35:44 | INFO     | app.parsers.markdown_parser:parse:18 - 开始解析 Markdown: data\uploads\3e6f188da57846e5a28f5beaa5153f41.md
+2026-06-25 17:35:44 | INFO     | app.parsers.markdown_parser:parse:33 - Markdown 解析完成: 3426 字符, 15 个标题
+2026-06-25 17:35:45 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:35:53 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:35:53 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 17:35:53 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=1
+2026-06-25 17:35:53 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=33c663f05e74433fa3e32795872dec91, chunks=4
+2026-06-25 17:36:36 | WARNING  | app.services.llm_service:_ensure_client:26 - LLM_API_KEY 未配置，LLM 调用将失败
+2026-06-25 17:36:36 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-chat
+2026-06-25 17:36:36 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 17:36:37 | INFO     | app.services.rerank_service:_ensure_model:30 - Rerank 模型加载完成
+2026-06-25 17:36:40 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='test question...', 候选=5, 最终=5
+2026-06-25 17:36:41 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:36:43 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:36:47 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:39:19 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-chat
+2026-06-25 17:39:20 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:40:17 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:40:17 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 17:40:17 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=5
+2026-06-25 17:40:17 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 17:40:21 | INFO     | app.services.rerank_service:_ensure_model:30 - Rerank 模型加载完成
+2026-06-25 17:42:26 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-chat
+2026-06-25 17:42:26 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:42:38 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:42:38 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 17:42:38 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=5
+2026-06-25 17:42:38 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 17:42:40 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-25 17:42:42 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='这个项目是做什么的？...', 候选=5, 最终=5
+2026-06-25 17:42:49 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 403 - {'error': {'code': '', 'message': 'This token has no access to model deepseek-chat (request id: 202606250942497324313488268d9d6cjVIowh7)', 'type': 'new_api_error'}}
+2026-06-25 17:42:51 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 403 - {'error': {'code': '', 'message': 'This token has no access to model deepseek-chat (request id: 202606250942518427815508268d9d6IT1dRU73)', 'type': 'new_api_error'}}
+2026-06-25 17:42:56 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 403 - {'error': {'code': '', 'message': 'This token has no access to model deepseek-chat (request id: 202606250942559794069088268d9d6K5c0qB1Y)', 'type': 'new_api_error'}}
+2026-06-25 17:43:49 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-v4-flash
+2026-06-25 17:43:49 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:44:01 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:44:01 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 17:44:01 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=5
+2026-06-25 17:44:01 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 17:44:03 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-25 17:44:05 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='这个项目是做什么的？...', 候选=5, 最终=5
+2026-06-25 17:44:07 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-flash under group 国产模型 (distributor) (request id: 202606250944077066354868268d9d6E4zuQkRR)', 'type': 'new_api_error'}}
+2026-06-25 17:44:11 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-flash under group 国产模型 (distributor) (request id: 202606250944113110003008268d9d62wRpwT1x)', 'type': 'new_api_error'}}
+2026-06-25 17:44:17 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-flash under group 国产模型 (distributor) (request id: 20260625094417262212348268d9d6MDcoPJkA)', 'type': 'new_api_error'}}
+2026-06-25 17:44:59 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=deepseek-v4-pro
+2026-06-25 17:44:59 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 17:45:10 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 17:45:10 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 17:45:10 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=5
+2026-06-25 17:45:10 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 17:45:13 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-25 17:45:14 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='这个项目是做什么的？...', 候选=5, 最终=5
+2026-06-25 17:45:17 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606250945174413922388268d9d67RzyGbnZ)', 'type': 'new_api_error'}}
+2026-06-25 17:45:21 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606250945209933178768268d9d6XgKzAhCb)', 'type': 'new_api_error'}}
+2026-06-25 17:45:26 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606250945265213468878268d9d6SRU9Vz45)', 'type': 'new_api_error'}}
+2026-06-25 17:50:49 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\fd842d7116074b6b9b5b29da408d4e3b.docx
+2026-06-25 17:50:50 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 17:50:51 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=a5410d8df2ed44cea4b3ca1409e16f3f, chunks=23
+2026-06-25 17:58:34 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 17:58:44 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=a5410d8df2ed44cea4b3ca1409e16f3f, tokens=6578
+2026-06-25 17:58:44 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 17:58:44 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:58:46 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 17:58:51 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:03:29 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='测试一下...', 候选=10, 最终=5
+2026-06-25 18:03:31 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606251003316044466348268d9d6TijMtVWN)', 'type': 'new_api_error'}}
+2026-06-25 18:03:35 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606251003353341383948268d9d6rabsoj85)', 'type': 'new_api_error'}}
+2026-06-25 18:03:40 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 503 - {'error': {'code': 'model_not_found', 'message': 'No available channel for model deepseek-v4-pro under group 国产模型 (distributor) (request id: 202606251003408489561188268d9d6q8VCwmOw)', 'type': 'new_api_error'}}
+2026-06-25 18:14:02 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=810ee4f1874749c28527c0f77cabe6e6
+2026-06-25 18:14:40 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:14:50 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:15:14 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:33:17 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:33:24 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=a5410d8df2ed44cea4b3ca1409e16f3f, tokens=6578
+2026-06-25 18:33:24 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 18:33:24 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:33:26 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:33:30 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:35:42 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:35:49 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:36:00 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=a5410d8df2ed44cea4b3ca1409e16f3f, tokens=6578
+2026-06-25 18:36:00 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 18:36:00 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:36:03 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:36:07 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:39:04 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=a5410d8df2ed44cea4b3ca1409e16f3f, tokens=6578
+2026-06-25 18:39:04 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 18:39:04 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:39:06 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:39:10 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 18:42:34 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:45:26 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 18:50:36 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 19:00:12 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=a5410d8df2ed44cea4b3ca1409e16f3f, tokens=6578
+2026-06-25 19:00:12 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 19:00:12 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 1 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 19:00:15 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 2 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 19:00:19 | WARNING  | app.services.llm_service:_chat:76 - LLM 调用失败 (第 3 次): Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****mpty is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2026-06-25 19:00:28 | INFO     | app.services.embedding_service:_ensure_model:23 - 加载 Embedding 模型: BAAI/bge-small-zh-v1.5
+2026-06-25 19:04:46 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 19:04:46 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=28
+2026-06-25 19:04:46 | INFO     | app.services.vector_service:remove_ids:100 - FAISS 删除 23 个向量
+2026-06-25 19:04:46 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=a5410d8df2ed44cea4b3ca1409e16f3f
+2026-06-25 19:04:48 | INFO     | app.services.vector_service:remove_ids:100 - FAISS 删除 4 个向量
+2026-06-25 19:04:48 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=33c663f05e74433fa3e32795872dec91
+2026-06-25 19:04:50 | INFO     | app.services.vector_service:remove_ids:100 - FAISS 删除 1 个向量
+2026-06-25 19:04:50 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=d66a1bf6774a4ba89332f31ffcbfc0e6
+2026-06-25 19:04:53 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\64fa93bdf0cd4edcbfb7f7d965ab216d.docx
+2026-06-25 19:04:54 | INFO     | app.parsers.docx_parser:parse:35 - DOCX 解析完成: 232 段, 9870 字符, 18 个标题
+2026-06-25 19:04:54 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 19:06:06 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 19:06:07 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=1521343ca34847758b6d9913c48a47f1, chunks=23
+2026-06-25 19:06:55 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-25 19:06:55 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=1521343ca34847758b6d9913c48a47f1, tokens=6578
+2026-06-25 19:06:55 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 19:07:44 | INFO     | app.services.summary_service:generate:74 - 摘要生成完成: doc=1521343ca34847758b6d9913c48a47f1, segments=1
+2026-06-25 19:09:38 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 19:09:40 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-25 19:09:44 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='你好...', 候选=10, 最终=5
+2026-06-25 19:09:57 | INFO     | app.services.chat_service:answer:126 - 问答完成: session=332873bc85f44df88a2b9331e80a4019, sources=5
+2026-06-25 19:10:37 | INFO     | app.services.chat_service:answer:64 - Query rewrite: '说明该文档的简要内容' -> '说明现有文档的简要内容'
+2026-06-25 19:10:41 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='说明现有文档的简要内容...', 候选=10, 最终=5
+2026-06-25 19:11:01 | INFO     | app.services.chat_service:answer:126 - 问答完成: session=332873bc85f44df88a2b9331e80a4019, sources=5
+2026-06-25 19:40:19 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-25 19:40:19 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=23
+2026-06-25 19:40:19 | INFO     | app.services.vector_service:remove_ids:100 - FAISS 删除 23 个向量
+2026-06-25 19:40:19 | INFO     | app.services.document_service:delete:177 - 文档删除完成: id=1521343ca34847758b6d9913c48a47f1
+2026-06-25 19:40:23 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\9cdf4db094a4400681ed71b56fd50fe5.docx
+2026-06-25 19:40:23 | INFO     | app.parsers.docx_parser:parse:46 - DOCX 解析完成: 251 段, 10401 字符, 18 个标题
+2026-06-25 19:40:24 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-25 19:41:02 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-25 19:41:04 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=80d2197e3d4449a387f98552da3aaa62, chunks=24
+2026-06-25 19:45:11 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-25 19:45:11 | INFO     | app.services.summary_service:generate:47 - 生成摘要: doc=80d2197e3d4449a387f98552da3aaa62, tokens=7060
+2026-06-25 19:45:11 | INFO     | app.services.summary_service:generate:57 - 分段摘要: 1 段
+2026-06-25 19:46:04 | INFO     | app.services.summary_service:generate:74 - 摘要生成完成: doc=80d2197e3d4449a387f98552da3aaa62, segments=1
+2026-06-25 19:46:38 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-25 19:46:40 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-25 19:46:44 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='给我opencv报告的简要总结...', 候选=10, 最终=5
+2026-06-25 19:47:05 | INFO     | app.services.chat_service:answer:126 - 问答完成: session=cb57edc6e941435fba3bedbfd42414c8, sources=5

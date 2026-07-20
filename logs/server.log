@@ -1,0 +1,687 @@
+INFO:     Started server process [26648]
+INFO:     Waiting for application startup.
+2026-06-26 15:22:44,962 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:22:44,962 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("documents")
+2026-06-26 15:22:44,962 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chunks")
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chat_sessions")
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chat_messages")
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:22:44,964 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+2026-06-26 15:23:16,105 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:23:16,105 INFO sqlalchemy.engine.Engine SELECT 1
+2026-06-26 15:23:16,105 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ()
+2026-06-26 15:23:16,105 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:53714 - "GET /health HTTP/1.1" 200 OK
+2026-06-26 15:23:16,312 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:23:16,312 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-26 15:23:16,312 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:23:16,313 INFO sqlalchemy.engine.Engine COMMIT
+[32m2026-06-26 15:23:18[0m | [1mINFO    [0m | [36mapp.services.llm_service[0m:[36m_ensure_client[0m:[36m34[0m - [1mLLM øÕªß∂À≥ı ºªØ: provider=deepseek, model=[¥Œ]gemini-2.5-pro[0m
+[32m2026-06-26 15:23:18[0m | [1mINFO    [0m | [36mapp.services.semantic_cache_service[0m:[36m__init__[0m:[36m56[0m - [1m”Ô“Âª∫¥Ê≥ı ºªØ: max_size=200, threshold=0.98[0m
+[32m2026-06-26 15:23:18[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m66[0m - [1mŒ ¥ƒ£ Ω: mode=open[0m
+[32m2026-06-26 15:23:18[0m | [1mINFO    [0m | [36mapp.services.embedding_service[0m:[36m_ensure_model[0m:[36m25[0m - [1mº”‘ÿ Embedding ƒ£–Õ: models/bge-small-zh-v1.5[0m
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 71/71 [00:00<00:00, 4156.83it/s]
+[32m2026-06-26 15:23:36[0m | [1mINFO    [0m | [36mapp.services.embedding_service[0m:[36m_ensure_model[0m:[36m32[0m - [1mEmbedding ƒ£–Õº”‘ÿÕÍ≥…[0m
+2026-06-26 15:23:36,726 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:23:36,728 INFO sqlalchemy.engine.Engine INSERT INTO chat_sessions (id, title, document_ids, created_at, updated_at) VALUES (?, ?, ?, ?, ?)
+2026-06-26 15:23:36,728 INFO sqlalchemy.engine.Engine [generated in 0.00038s] ('b900f0ffdb824f0a8b2e6dc903cba177', None, None, '2026-06-26 07:23:36.728771', None)
+2026-06-26 15:23:36,728 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:23:36,739 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:23:36,742 INFO sqlalchemy.engine.Engine SELECT chat_sessions.id, chat_sessions.title, chat_sessions.document_ids, chat_sessions.created_at, chat_sessions.updated_at 
+FROM chat_sessions 
+WHERE chat_sessions.id = ?
+2026-06-26 15:23:36,742 INFO sqlalchemy.engine.Engine [generated in 0.00022s] ('b900f0ffdb824f0a8b2e6dc903cba177',)
+2026-06-26 15:23:36,745 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.session_id = ? ORDER BY chat_messages.created_at DESC
+ LIMIT ? OFFSET ?
+2026-06-26 15:23:36,745 INFO sqlalchemy.engine.Engine [generated in 0.00026s] ('b900f0ffdb824f0a8b2e6dc903cba177', 6, 0)
+[32m2026-06-26 15:24:01[0m | [1mINFO    [0m | [36mapp.services.retrieval_service[0m:[36m_try_multi_query[0m:[36m133[0m - [1mMulti-Query …˙≥… 3 ∏ˆ±‰÷÷: ['Which techniques are implemented?', 'What models does this rely on?', 'Describe the underlying methodology.'][0m
+[32m2026-06-26 15:24:01[0m | [1mINFO    [0m | [36mapp.services.vector_service[0m:[36m_ensure_index[0m:[36m38[0m - [1mº”‘ÿ“—”– FAISS À˜“˝: data\faiss_index\faiss.index[0m
+[32m2026-06-26 15:24:01[0m | [1mINFO    [0m | [36mapp.services.vector_service[0m:[36m_ensure_index[0m:[36m41[0m - [1mFAISS À˜“˝º”‘ÿÕÍ≥…£¨Œ¨∂»=512, œÚ¡ø ˝=211[0m
+2026-06-26 15:24:01,149 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,149 INFO sqlalchemy.engine.Engine [generated in 0.00038s] (62,)
+2026-06-26 15:24:01,150 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,150 INFO sqlalchemy.engine.Engine [cached since 0.001304s ago] (65,)
+2026-06-26 15:24:01,151 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,151 INFO sqlalchemy.engine.Engine [cached since 0.001951s ago] (63,)
+2026-06-26 15:24:01,151 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,151 INFO sqlalchemy.engine.Engine [cached since 0.002558s ago] (174,)
+2026-06-26 15:24:01,152 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,152 INFO sqlalchemy.engine.Engine [cached since 0.003218s ago] (58,)
+2026-06-26 15:24:01,152 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,153 INFO sqlalchemy.engine.Engine [cached since 0.003769s ago] (64,)
+2026-06-26 15:24:01,153 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,153 INFO sqlalchemy.engine.Engine [cached since 0.004333s ago] (59,)
+2026-06-26 15:24:01,154 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,154 INFO sqlalchemy.engine.Engine [cached since 0.004919s ago] (111,)
+2026-06-26 15:24:01,154 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,154 INFO sqlalchemy.engine.Engine [cached since 0.005493s ago] (68,)
+2026-06-26 15:24:01,155 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,155 INFO sqlalchemy.engine.Engine [cached since 0.006084s ago] (8,)
+2026-06-26 15:24:01,155 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,155 INFO sqlalchemy.engine.Engine [cached since 0.006715s ago] (146,)
+2026-06-26 15:24:01,156 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,156 INFO sqlalchemy.engine.Engine [cached since 0.007337s ago] (61,)
+2026-06-26 15:24:01,179 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,179 INFO sqlalchemy.engine.Engine [cached since 0.03046s ago] (64,)
+2026-06-26 15:24:01,180 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,180 INFO sqlalchemy.engine.Engine [cached since 0.03093s ago] (65,)
+2026-06-26 15:24:01,180 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,181 INFO sqlalchemy.engine.Engine [cached since 0.03149s ago] (148,)
+2026-06-26 15:24:01,181 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,181 INFO sqlalchemy.engine.Engine [cached since 0.03196s ago] (16,)
+2026-06-26 15:24:01,181 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,181 INFO sqlalchemy.engine.Engine [cached since 0.03228s ago] (21,)
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine [cached since 0.03259s ago] (62,)
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine [cached since 0.03288s ago] (147,)
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine [cached since 0.03317s ago] (63,)
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,182 INFO sqlalchemy.engine.Engine [cached since 0.03346s ago] (130,)
+2026-06-26 15:24:01,183 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,183 INFO sqlalchemy.engine.Engine [cached since 0.03382s ago] (22,)
+2026-06-26 15:24:01,183 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,183 INFO sqlalchemy.engine.Engine [cached since 0.03443s ago] (54,)
+2026-06-26 15:24:01,184 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,184 INFO sqlalchemy.engine.Engine [cached since 0.03498s ago] (137,)
+2026-06-26 15:24:01,205 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,206 INFO sqlalchemy.engine.Engine [cached since 0.05661s ago] (65,)
+2026-06-26 15:24:01,206 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,206 INFO sqlalchemy.engine.Engine [cached since 0.05742s ago] (49,)
+2026-06-26 15:24:01,207 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,207 INFO sqlalchemy.engine.Engine [cached since 0.05828s ago] (64,)
+2026-06-26 15:24:01,208 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,208 INFO sqlalchemy.engine.Engine [cached since 0.05876s ago] (9,)
+2026-06-26 15:24:01,208 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,208 INFO sqlalchemy.engine.Engine [cached since 0.05916s ago] (16,)
+2026-06-26 15:24:01,208 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,209 INFO sqlalchemy.engine.Engine [cached since 0.05955s ago] (48,)
+2026-06-26 15:24:01,209 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,209 INFO sqlalchemy.engine.Engine [cached since 0.06008s ago] (61,)
+2026-06-26 15:24:01,210 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,210 INFO sqlalchemy.engine.Engine [cached since 0.06066s ago] (53,)
+2026-06-26 15:24:01,210 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,210 INFO sqlalchemy.engine.Engine [cached since 0.06125s ago] (46,)
+2026-06-26 15:24:01,211 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,211 INFO sqlalchemy.engine.Engine [cached since 0.06182s ago] (60,)
+2026-06-26 15:24:01,211 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,211 INFO sqlalchemy.engine.Engine [cached since 0.06235s ago] (66,)
+2026-06-26 15:24:01,212 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,212 INFO sqlalchemy.engine.Engine [cached since 0.06288s ago] (5,)
+2026-06-26 15:24:01,234 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,234 INFO sqlalchemy.engine.Engine [cached since 0.08541s ago] (65,)
+2026-06-26 15:24:01,235 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,235 INFO sqlalchemy.engine.Engine [cached since 0.08605s ago] (64,)
+2026-06-26 15:24:01,235 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,236 INFO sqlalchemy.engine.Engine [cached since 0.08659s ago] (62,)
+2026-06-26 15:24:01,236 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,236 INFO sqlalchemy.engine.Engine [cached since 0.0871s ago] (160,)
+2026-06-26 15:24:01,237 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,237 INFO sqlalchemy.engine.Engine [cached since 0.08761s ago] (17,)
+2026-06-26 15:24:01,237 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,237 INFO sqlalchemy.engine.Engine [cached since 0.08813s ago] (12,)
+2026-06-26 15:24:01,238 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,238 INFO sqlalchemy.engine.Engine [cached since 0.08863s ago] (148,)
+2026-06-26 15:24:01,238 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,238 INFO sqlalchemy.engine.Engine [cached since 0.08913s ago] (63,)
+2026-06-26 15:24:01,239 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,239 INFO sqlalchemy.engine.Engine [cached since 0.08977s ago] (68,)
+2026-06-26 15:24:01,239 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,239 INFO sqlalchemy.engine.Engine [cached since 0.09032s ago] (54,)
+2026-06-26 15:24:01,240 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,240 INFO sqlalchemy.engine.Engine [cached since 0.09089s ago] (59,)
+2026-06-26 15:24:01,240 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,240 INFO sqlalchemy.engine.Engine [cached since 0.09145s ago] (9,)
+2026-06-26 15:24:01,241 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,241 INFO sqlalchemy.engine.Engine [cached since 0.09199s ago] (62,)
+2026-06-26 15:24:01,241 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,242 INFO sqlalchemy.engine.Engine [cached since 0.09251s ago] (65,)
+2026-06-26 15:24:01,242 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,242 INFO sqlalchemy.engine.Engine [cached since 0.09305s ago] (63,)
+2026-06-26 15:24:01,242 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,243 INFO sqlalchemy.engine.Engine [cached since 0.09357s ago] (174,)
+2026-06-26 15:24:01,243 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,243 INFO sqlalchemy.engine.Engine [cached since 0.09409s ago] (58,)
+2026-06-26 15:24:01,243 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,244 INFO sqlalchemy.engine.Engine [cached since 0.0946s ago] (64,)
+2026-06-26 15:24:01,244 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,244 INFO sqlalchemy.engine.Engine [cached since 0.09512s ago] (59,)
+2026-06-26 15:24:01,245 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,245 INFO sqlalchemy.engine.Engine [cached since 0.09566s ago] (111,)
+2026-06-26 15:24:01,245 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,245 INFO sqlalchemy.engine.Engine [cached since 0.0962s ago] (68,)
+2026-06-26 15:24:01,246 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,246 INFO sqlalchemy.engine.Engine [cached since 0.09671s ago] (8,)
+2026-06-26 15:24:01,246 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,246 INFO sqlalchemy.engine.Engine [cached since 0.09723s ago] (146,)
+2026-06-26 15:24:01,247 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,247 INFO sqlalchemy.engine.Engine [cached since 0.09778s ago] (61,)
+2026-06-26 15:24:01,247 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,247 INFO sqlalchemy.engine.Engine [cached since 0.09829s ago] (148,)
+2026-06-26 15:24:01,248 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,248 INFO sqlalchemy.engine.Engine [cached since 0.09878s ago] (16,)
+2026-06-26 15:24:01,248 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,248 INFO sqlalchemy.engine.Engine [cached since 0.09931s ago] (21,)
+2026-06-26 15:24:01,249 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,249 INFO sqlalchemy.engine.Engine [cached since 0.09981s ago] (147,)
+2026-06-26 15:24:01,249 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,249 INFO sqlalchemy.engine.Engine [cached since 0.1003s ago] (130,)
+2026-06-26 15:24:01,250 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,250 INFO sqlalchemy.engine.Engine [cached since 0.1008s ago] (22,)
+2026-06-26 15:24:01,250 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,250 INFO sqlalchemy.engine.Engine [cached since 0.1013s ago] (54,)
+2026-06-26 15:24:01,251 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,251 INFO sqlalchemy.engine.Engine [cached since 0.1018s ago] (137,)
+2026-06-26 15:24:01,251 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,251 INFO sqlalchemy.engine.Engine [cached since 0.1023s ago] (49,)
+2026-06-26 15:24:01,252 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,252 INFO sqlalchemy.engine.Engine [cached since 0.1028s ago] (9,)
+2026-06-26 15:24:01,252 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,252 INFO sqlalchemy.engine.Engine [cached since 0.1033s ago] (48,)
+2026-06-26 15:24:01,253 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,253 INFO sqlalchemy.engine.Engine [cached since 0.1038s ago] (53,)
+2026-06-26 15:24:01,253 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,253 INFO sqlalchemy.engine.Engine [cached since 0.1043s ago] (46,)
+2026-06-26 15:24:01,254 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,254 INFO sqlalchemy.engine.Engine [cached since 0.1048s ago] (60,)
+2026-06-26 15:24:01,254 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,254 INFO sqlalchemy.engine.Engine [cached since 0.1053s ago] (66,)
+2026-06-26 15:24:01,255 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,255 INFO sqlalchemy.engine.Engine [cached since 0.1059s ago] (5,)
+2026-06-26 15:24:01,255 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,255 INFO sqlalchemy.engine.Engine [cached since 0.1064s ago] (160,)
+2026-06-26 15:24:01,256 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,256 INFO sqlalchemy.engine.Engine [cached since 0.1069s ago] (17,)
+2026-06-26 15:24:01,256 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:24:01,256 INFO sqlalchemy.engine.Engine [cached since 0.1074s ago] (12,)
+2026-06-26 15:24:01,259 INFO sqlalchemy.engine.Engine SELECT chunks.id, chunks.document_id, chunks.chunk_index, chunks.content, chunks.page_num, chunks.char_count, chunks.token_count, chunks.metadata, chunks.created_at 
+FROM chunks 
+WHERE chunks.id IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:01,259 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ('d0ec6102534941e28daae22a60395881', '4db61f891eba42bebcc06caa3b471112', '35e2c5b96e974b1a8e18c79fbdfd57e6', 'bd765600426441e68674429b01c684b8', 'cf644662c4454dcd8097dc578e5460bd', 'b3d3efe3111e4fa487c17446fe0e95a9', '6167ea6020ae4e4d81970896b10512cc', '3c6b87562e9a4723a71b726b50548fbb', '64b266694a314490b51af1e35866e8d6', '8be11bfc339c47dd83857343f92efd95', 'a95754f049cb4f99afcdf04083021db3', '8bde7245594a444dbb1c557c07a8f54a', 'ef647cd308ff47ed9b271456c1228dce', 'f84578ef469f4affadd3ec1dba22b792', 'c04acf94aa52438f8231ba917297ee5c', '47f4e5f54da342fda446a39f71eee42f', '8c7e3b78020646daba0c2b348eb44b56', '9b72e964e60f449db0389ae15b67ad00', 'c59dd65181464842b66da4ac2914ba4c', 'ca8bd40a60d744379083ce675f5801d6', '955602c4e64b4e4eb23dc3987b482420', '75a4150197174b5ba4575b2b9895db61', 'fcf6f763805848c685420ce703b747df', 'd1667e595d10465eb10e5ced487df856', '671f8c7318eb48eeafa94f8639e515d9', '9540a617094843a68aa771124c168c0b', 'cff6f125d7f14e68929d45d3ec69167f', 'bc19fb06e4d74c0eb241b1944437050e', '667b82dab1d843009e3be2aaed236b87', '0ca4166ebe134233ae6e8115c0328219', 'b54d798d3d4b40e6827e2c5ceaf574b0')
+2026-06-26 15:24:01,264 INFO sqlalchemy.engine.Engine SELECT documents.id, documents.file_name, documents.file_type, documents.file_path, documents.file_size, documents.status, documents.chunk_count, documents.summary, documents.error_msg, documents.created_at, documents.updated_at 
+FROM documents 
+WHERE documents.id IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:01,264 INFO sqlalchemy.engine.Engine [generated in 0.00033s] ('80d2197e3d4449a387f98552da3aaa62', 'd6309261615d4c8b8d9b366964548bd6', 'e51f36d36427411081ea78a9b0e96932', 'ab96d90b434e4bc6b4870a823a001455', 'd6309261615d4c8b8d9b366964548bd6', 'd6309261615d4c8b8d9b366964548bd6', 'd6309261615d4c8b8d9b366964548bd6', 'ab96d90b434e4bc6b4870a823a001455', 'f262763b1f894066bdc004ace80bfd74', '80d2197e3d4449a387f98552da3aaa62', 'd6309261615d4c8b8d9b366964548bd6', '80d2197e3d4449a387f98552da3aaa62', '48c2307422e7446e90e8a682fedd58bc', 'd6309261615d4c8b8d9b366964548bd6', 'f262763b1f894066bdc004ace80bfd74', '80d2197e3d4449a387f98552da3aaa62', 'ab96d90b434e4bc6b4870a823a001455', 'd6309261615d4c8b8d9b366964548bd6', '80d2197e3d4449a387f98552da3aaa62', '80d2197e3d4449a387f98552da3aaa62', 'ab96d90b434e4bc6b4870a823a001455', '80d2197e3d4449a387f98552da3aaa62', 'f262763b1f894066bdc004ace80bfd74', '48c2307422e7446e90e8a682fedd58bc', 'd6309261615d4c8b8d9b366964548bd6', 'd6309261615d4c8b8d9b366964548bd6', 'd6309261615d4c8b8d9b366964548bd6', 'f262763b1f894066bdc004ace80bfd74', 'ab96d90b434e4bc6b4870a823a001455', '80d2197e3d4449a387f98552da3aaa62', 'f262763b1f894066bdc004ace80bfd74')
+[32m2026-06-26 15:24:01[0m | [1mINFO    [0m | [36mapp.services.rerank_service[0m:[36m_ensure_model[0m:[36m24[0m - [1mº”‘ÿ Rerank ƒ£–Õ: models/bge-reranker-base[0m
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä®Ä| 201/201 [00:00<00:00, 4460.99it/s]
+[32m2026-06-26 15:24:05[0m | [1mINFO    [0m | [36mapp.services.rerank_service[0m:[36m_ensure_model[0m:[36m34[0m - [1mRerank ƒ£–Õº”‘ÿÕÍ≥…[0m
+[32m2026-06-26 15:24:16[0m | [1mINFO    [0m | [36mapp.services.retrieval_service[0m:[36mretrieve[0m:[36m119[0m - [1mºÏÀ˜ÕÍ≥…: query='What algorithms are used?...', queries=4, ∫Ú—°=5, ◊Ó÷’=5[0m
+2026-06-26 15:24:33,217 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:33,217 INFO sqlalchemy.engine.Engine [generated in 0.00036s] ('37cd678e8c75499186abd83991034a29', 'b900f0ffdb824f0a8b2e6dc903cba177', 'user', 'What algorithms are used?', None, None, '2026-06-26 07:24:33.217602')
+2026-06-26 15:24:33,217 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:33,221 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,221 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:33,222 INFO sqlalchemy.engine.Engine [generated in 0.00034s] ('37cd678e8c75499186abd83991034a29',)
+2026-06-26 15:24:33,222 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:33,223 INFO sqlalchemy.engine.Engine [cached since 0.004526s ago] ('10f73cf519794aa6941fcf156c556839', 'b900f0ffdb824f0a8b2e6dc903cba177', 'assistant', '1. ª˘”⁄Œƒµµµƒªÿ¥\n\n∏˘æ›Ã·π©µƒŒƒµµ£¨Ã·µΩ¡À“‘œ¬º∏¿‡À„∑®£∫\n\n*   **ÕºœÒ∑÷∏ÓÀ„∑®**:\n    *   **GrabCut À„∑®**: “ª÷÷ª˘”⁄Õº∏Ó£®Graph Cut£©µƒµ¸¥˙ ΩΩªª•∑÷∏Ó∑Ω∑®°£À¸Ω´ÕºœÒ∑÷∏ÓŒ Ã‚Ω®ƒ£Œ™ƒ‹¡ø◊Ó–°ªØŒ Ã‚£¨≤¢◊€∫œ¿˚”√—’…´Õ≥º∆∫Õø’º‰¡¨–¯–‘‘º ¯¿¥∑÷¿Î«∞æ∞∫Õ±≥æ∞ ... (717 characters truncated) ... n3. “¿æ›¿¥‘¥\n\n*   ¿¥‘¥1: œÓƒø∞Àπ…∏¥œ∞.pdf µ⁄1“≥\n*   ¿¥‘¥2: Õ¯¬Á÷™ ∂µ„◊‹Ω·.pdf µ⁄6“≥\n*   ¿¥‘¥3: ≤Ÿ◊˜œµÕ≥∏¥œ∞.pdf µ⁄22“≥\n*   ¿¥‘¥4: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx\n*   ¿¥‘¥5: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx', '[{"chunk_id": "955602c4e64b4e4eb23dc3987b482420", "document_id": "f262763b1f894066bdc004ace80bfd74", "document_name": "œÓƒø∞Àπ…∏¥œ∞.pdf", "page_num": 1, "s ... (1614 characters truncated) ... (Mat& src, Mat& dst) {\\ndst = src.clone();\\nRect rect(src.cols / 8, src.rows / 8, src.cols * 3 / 4, src.rows * 3...", "score": 0.5093965967455243}]', None, '2026-06-26 07:24:33.222231')
+2026-06-26 15:24:33,223 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:33,223 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,223 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:33,223 INFO sqlalchemy.engine.Engine [cached since 0.003378s ago] ('10f73cf519794aa6941fcf156c556839',)
+[32m2026-06-26 15:24:33[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m220[0m - [1mŒ ¥ÕÍ≥…: session=b900f0ffdb824f0a8b2e6dc903cba177, mode=open, sources=5, grounded=None[0m
+INFO:     127.0.0.1:53718 - "POST /api/chat HTTP/1.1" 200 OK
+2026-06-26 15:24:33,235 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-06-26 15:24:33,236 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,236 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-26 15:24:33,236 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:24:33,236 INFO sqlalchemy.engine.Engine COMMIT
+[32m2026-06-26 15:24:33[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m66[0m - [1mŒ ¥ƒ£ Ω: mode=open[0m
+[32m2026-06-26 15:24:33[0m | [1mINFO    [0m | [36mapp.services.semantic_cache_service[0m:[36mlookup[0m:[36m124[0m - [1m”Ô“Âª∫¥Ê√¸÷–: query='What algorithms are used?...', score=1.0000, hit_count=1[0m
+2026-06-26 15:24:33,249 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,249 INFO sqlalchemy.engine.Engine INSERT INTO chat_sessions (id, title, document_ids, created_at, updated_at) VALUES (?, ?, ?, ?, ?)
+2026-06-26 15:24:33,249 INFO sqlalchemy.engine.Engine [cached since 56.52s ago] ('0f4edef475b141f0ba5808fc01ebc067', None, None, '2026-06-26 07:24:33.249333', None)
+2026-06-26 15:24:33,249 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:33,250 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,250 INFO sqlalchemy.engine.Engine SELECT chat_sessions.id, chat_sessions.title, chat_sessions.document_ids, chat_sessions.created_at, chat_sessions.updated_at 
+FROM chat_sessions 
+WHERE chat_sessions.id = ?
+2026-06-26 15:24:33,250 INFO sqlalchemy.engine.Engine [cached since 56.51s ago] ('0f4edef475b141f0ba5808fc01ebc067',)
+2026-06-26 15:24:33,251 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:33,251 INFO sqlalchemy.engine.Engine [cached since 0.03407s ago] ('a8c1d2d63aa141d5be3016e8911eff48', '0f4edef475b141f0ba5808fc01ebc067', 'user', 'What algorithms are used?', None, None, '2026-06-26 07:24:33.251935')
+2026-06-26 15:24:33,252 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:33,253 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,254 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:33,254 INFO sqlalchemy.engine.Engine [cached since 0.03265s ago] ('a8c1d2d63aa141d5be3016e8911eff48',)
+2026-06-26 15:24:33,254 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:33,254 INFO sqlalchemy.engine.Engine [cached since 0.03695s ago] ('2721f8f890e34610945a238574e94270', '0f4edef475b141f0ba5808fc01ebc067', 'assistant', '1. ª˘”⁄Œƒµµµƒªÿ¥\n\n∏˘æ›Ã·π©µƒŒƒµµ£¨Ã·µΩ¡À“‘œ¬º∏¿‡À„∑®£∫\n\n*   **ÕºœÒ∑÷∏ÓÀ„∑®**:\n    *   **GrabCut À„∑®**: “ª÷÷ª˘”⁄Õº∏Ó£®Graph Cut£©µƒµ¸¥˙ ΩΩªª•∑÷∏Ó∑Ω∑®°£À¸Ω´ÕºœÒ∑÷∏ÓŒ Ã‚Ω®ƒ£Œ™ƒ‹¡ø◊Ó–°ªØŒ Ã‚£¨≤¢◊€∫œ¿˚”√—’…´Õ≥º∆∫Õø’º‰¡¨–¯–‘‘º ¯¿¥∑÷¿Î«∞æ∞∫Õ±≥æ∞ ... (717 characters truncated) ... n3. “¿æ›¿¥‘¥\n\n*   ¿¥‘¥1: œÓƒø∞Àπ…∏¥œ∞.pdf µ⁄1“≥\n*   ¿¥‘¥2: Õ¯¬Á÷™ ∂µ„◊‹Ω·.pdf µ⁄6“≥\n*   ¿¥‘¥3: ≤Ÿ◊˜œµÕ≥∏¥œ∞.pdf µ⁄22“≥\n*   ¿¥‘¥4: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx\n*   ¿¥‘¥5: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx', None, None, '2026-06-26 07:24:33.254472')
+2026-06-26 15:24:33,254 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:33,257 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:33,257 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:33,257 INFO sqlalchemy.engine.Engine [cached since 0.03649s ago] ('2721f8f890e34610945a238574e94270',)
+[32m2026-06-26 15:24:33[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m91[0m - [1m”Ô“Âª∫¥Ê√¸÷–£¨Ã¯π˝ºÏÀ˜”Î LLM µ˜”√: session=0f4edef475b141f0ba5808fc01ebc067[0m
+INFO:     127.0.0.1:58389 - "POST /api/chat HTTP/1.1" 200 OK
+2026-06-26 15:24:33,259 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-06-26 15:24:55,199 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:55,199 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-26 15:24:55,199 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:24:55,199 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:51270 - "POST /api/chat/stream HTTP/1.1" 200 OK
+[32m2026-06-26 15:24:55[0m | [1mINFO    [0m | [36mapp.services.semantic_cache_service[0m:[36mlookup[0m:[36m124[0m - [1m”Ô“Âª∫¥Ê√¸÷–: query='What algorithms are used?...', score=1.0000, hit_count=2[0m
+2026-06-26 15:24:55,215 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:55,215 INFO sqlalchemy.engine.Engine INSERT INTO chat_sessions (id, title, document_ids, created_at, updated_at) VALUES (?, ?, ?, ?, ?)
+2026-06-26 15:24:55,215 INFO sqlalchemy.engine.Engine [cached since 78.49s ago] ('de0e2f0aa83347bfb8d58142ae18c264', None, None, '2026-06-26 07:24:55.215374', None)
+2026-06-26 15:24:55,218 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:55,218 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:55,220 INFO sqlalchemy.engine.Engine SELECT chat_sessions.id, chat_sessions.title, chat_sessions.document_ids, chat_sessions.created_at, chat_sessions.updated_at 
+FROM chat_sessions 
+WHERE chat_sessions.id = ?
+2026-06-26 15:24:55,220 INFO sqlalchemy.engine.Engine [cached since 78.48s ago] ('de0e2f0aa83347bfb8d58142ae18c264',)
+2026-06-26 15:24:55,220 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:55,220 INFO sqlalchemy.engine.Engine [cached since 22s ago] ('bcbaa39e0aaa4237a296cc5a16802743', 'de0e2f0aa83347bfb8d58142ae18c264', 'user', 'What algorithms are used?', None, None, '2026-06-26 07:24:55.220297')
+2026-06-26 15:24:55,220 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:55,222 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:55,222 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:55,222 INFO sqlalchemy.engine.Engine [cached since 22s ago] ('bcbaa39e0aaa4237a296cc5a16802743',)
+2026-06-26 15:24:55,224 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:24:55,224 INFO sqlalchemy.engine.Engine [cached since 22.01s ago] ('666aa915bd4c408a83e74b86cd9eadae', 'de0e2f0aa83347bfb8d58142ae18c264', 'assistant', '1. ª˘”⁄Œƒµµµƒªÿ¥\n\n∏˘æ›Ã·π©µƒŒƒµµ£¨Ã·µΩ¡À“‘œ¬º∏¿‡À„∑®£∫\n\n*   **ÕºœÒ∑÷∏ÓÀ„∑®**:\n    *   **GrabCut À„∑®**: “ª÷÷ª˘”⁄Õº∏Ó£®Graph Cut£©µƒµ¸¥˙ ΩΩªª•∑÷∏Ó∑Ω∑®°£À¸Ω´ÕºœÒ∑÷∏ÓŒ Ã‚Ω®ƒ£Œ™ƒ‹¡ø◊Ó–°ªØŒ Ã‚£¨≤¢◊€∫œ¿˚”√—’…´Õ≥º∆∫Õø’º‰¡¨–¯–‘‘º ¯¿¥∑÷¿Î«∞æ∞∫Õ±≥æ∞ ... (717 characters truncated) ... n3. “¿æ›¿¥‘¥\n\n*   ¿¥‘¥1: œÓƒø∞Àπ…∏¥œ∞.pdf µ⁄1“≥\n*   ¿¥‘¥2: Õ¯¬Á÷™ ∂µ„◊‹Ω·.pdf µ⁄6“≥\n*   ¿¥‘¥3: ≤Ÿ◊˜œµÕ≥∏¥œ∞.pdf µ⁄22“≥\n*   ¿¥‘¥4: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx\n*   ¿¥‘¥5: OpenCV µ—È±®∏Ê_ÕºœÒ∑÷∏Ó.docx', None, None, '2026-06-26 07:24:55.224307')
+2026-06-26 15:24:55,224 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:24:55,226 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:24:55,226 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:24:55,226 INFO sqlalchemy.engine.Engine [cached since 22s ago] ('666aa915bd4c408a83e74b86cd9eadae',)
+2026-06-26 15:24:55,228 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-06-26 15:25:04,397 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:25:04,397 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-26 15:25:04,397 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-26 15:25:04,397 INFO sqlalchemy.engine.Engine COMMIT
+[32m2026-06-26 15:25:04[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m66[0m - [1mŒ ¥ƒ£ Ω: mode=strict[0m
+2026-06-26 15:25:04,413 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:25:04,413 INFO sqlalchemy.engine.Engine INSERT INTO chat_sessions (id, title, document_ids, created_at, updated_at) VALUES (?, ?, ?, ?, ?)
+2026-06-26 15:25:04,413 INFO sqlalchemy.engine.Engine [cached since 87.69s ago] ('97a654cf68b045eaac2f304a641e53d3', None, None, '2026-06-26 07:25:04.413985', None)
+2026-06-26 15:25:04,414 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:25:04,416 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:25:04,416 INFO sqlalchemy.engine.Engine SELECT chat_sessions.id, chat_sessions.title, chat_sessions.document_ids, chat_sessions.created_at, chat_sessions.updated_at 
+FROM chat_sessions 
+WHERE chat_sessions.id = ?
+2026-06-26 15:25:04,416 INFO sqlalchemy.engine.Engine [cached since 87.68s ago] ('97a654cf68b045eaac2f304a641e53d3',)
+2026-06-26 15:25:04,417 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.session_id = ? ORDER BY chat_messages.created_at DESC
+ LIMIT ? OFFSET ?
+2026-06-26 15:25:04,417 INFO sqlalchemy.engine.Engine [cached since 87.67s ago] ('97a654cf68b045eaac2f304a641e53d3', 6, 0)
+[32m2026-06-26 15:25:24[0m | [1mINFO    [0m | [36mapp.services.retrieval_service[0m:[36m_try_multi_query[0m:[36m133[0m - [1mMulti-Query …˙≥… 3 ∏ˆ±‰÷÷: ['Which methods are implemented?', 'Can you describe the underlying technical approach?', 'What is the algorithmic basis for this?'][0m
+2026-06-26 15:25:24,455 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,455 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (62,)
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (65,)
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (63,)
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (174,)
+2026-06-26 15:25:24,457 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (58,)
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (64,)
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (59,)
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,459 INFO sqlalchemy.engine.Engine [cached since 83.31s ago] (111,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (65,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (64,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (62,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (8,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (147,)
+2026-06-26 15:25:24,480 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,482 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (148,)
+2026-06-26 15:25:24,482 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,482 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (61,)
+2026-06-26 15:25:24,482 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,482 INFO sqlalchemy.engine.Engine [cached since 83.33s ago] (105,)
+2026-06-26 15:25:24,513 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,513 INFO sqlalchemy.engine.Engine [cached since 83.36s ago] (58,)
+2026-06-26 15:25:24,513 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,513 INFO sqlalchemy.engine.Engine [cached since 83.37s ago] (59,)
+2026-06-26 15:25:24,513 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,515 INFO sqlalchemy.engine.Engine [cached since 83.37s ago] (64,)
+2026-06-26 15:25:24,515 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,515 INFO sqlalchemy.engine.Engine [cached since 83.37s ago] (65,)
+2026-06-26 15:25:24,515 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,515 INFO sqlalchemy.engine.Engine [cached since 83.37s ago] (160,)
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (65,)
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (125,)
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (9,)
+2026-06-26 15:25:24,536 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (64,)
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (10,)
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (62,)
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,538 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (62,)
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (65,)
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (63,)
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (174,)
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (58,)
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,540 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (64,)
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (59,)
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (111,)
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,542 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (8,)
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine [cached since 83.39s ago] (147,)
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (148,)
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (61,)
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,544 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (105,)
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (160,)
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (125,)
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (9,)
+2026-06-26 15:25:24,546 INFO sqlalchemy.engine.Engine SELECT index_mapping.chunk_id 
+FROM index_mapping 
+WHERE index_mapping.faiss_id = ?
+2026-06-26 15:25:24,548 INFO sqlalchemy.engine.Engine [cached since 83.4s ago] (10,)
+2026-06-26 15:25:24,548 INFO sqlalchemy.engine.Engine SELECT chunks.id, chunks.document_id, chunks.chunk_index, chunks.content, chunks.page_num, chunks.char_count, chunks.token_count, chunks.metadata, chunks.created_at 
+FROM chunks 
+WHERE chunks.id IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:25:24,548 INFO sqlalchemy.engine.Engine [cached since 83.29s ago] ('d0ec6102534941e28daae22a60395881', '4db61f891eba42bebcc06caa3b471112', '35e2c5b96e974b1a8e18c79fbdfd57e6', 'bd765600426441e68674429b01c684b8', 'cf644662c4454dcd8097dc578e5460bd', 'b3d3efe3111e4fa487c17446fe0e95a9', '6167ea6020ae4e4d81970896b10512cc', '3c6b87562e9a4723a71b726b50548fbb', '8be11bfc339c47dd83857343f92efd95', '47f4e5f54da342fda446a39f71eee42f', 'ef647cd308ff47ed9b271456c1228dce', '8bde7245594a444dbb1c557c07a8f54a', '4f621239616c4c6f8e09983f9e1809e6', '667b82dab1d843009e3be2aaed236b87', '9fc9309d367f4ae6af4051e4fecf724a', '75a4150197174b5ba4575b2b9895db61', 'a3850f3a4ab14cb5a7dbaa7fe94d1107')
+2026-06-26 15:25:24,550 INFO sqlalchemy.engine.Engine SELECT documents.id, documents.file_name, documents.file_type, documents.file_path, documents.file_size, documents.status, documents.chunk_count, documents.summary, documents.error_msg, documents.created_at, documents.updated_at 
+FROM documents 
+WHERE documents.id IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:25:24,550 INFO sqlalchemy.engine.Engine [cached since 83.29s ago] ('d6309261615d4c8b8d9b366964548bd6', 'e51f36d36427411081ea78a9b0e96932', 'ab96d90b434e4bc6b4870a823a001455', 'd6309261615d4c8b8d9b366964548bd6', 'e51f36d36427411081ea78a9b0e96932', 'd6309261615d4c8b8d9b366964548bd6', 'ab96d90b434e4bc6b4870a823a001455', '80d2197e3d4449a387f98552da3aaa62', 'd6309261615d4c8b8d9b366964548bd6', '80d2197e3d4449a387f98552da3aaa62', 'e51f36d36427411081ea78a9b0e96932', '80d2197e3d4449a387f98552da3aaa62', 'd6309261615d4c8b8d9b366964548bd6', 'ab96d90b434e4bc6b4870a823a001455', 'd6309261615d4c8b8d9b366964548bd6', 'd6309261615d4c8b8d9b366964548bd6', 'ab96d90b434e4bc6b4870a823a001455')
+[32m2026-06-26 15:25:30[0m | [1mINFO    [0m | [36mapp.services.retrieval_service[0m:[36mretrieve[0m:[36m119[0m - [1mºÏÀ˜ÕÍ≥…: query='What algorithms are used?...', queries=4, ∫Ú—°=3, ◊Ó÷’=3[0m
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine [cached since 85.62s ago] ('d202769dfd3044959ae8347265412209', '97a654cf68b045eaac2f304a641e53d3', 'user', 'What algorithms are used?', None, None, '2026-06-26 07:25:58.838742')
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine [cached since 85.62s ago] ('d202769dfd3044959ae8347265412209',)
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine INSERT INTO chat_messages (id, session_id, role, content, source_chunks, rewritten_query, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine [cached since 85.63s ago] ('c7fba6d563134a2d9e8d296c88b5a06b', '97a654cf68b045eaac2f304a641e53d3', 'assistant', '1.  ∏˘æ›≤Œøº…œœ¬Œƒ£¨Œƒµµ÷–Ã·º∞¡À“‘œ¬À„∑®£∫\n    *   **π˛œ£À„∑®£®F£©**£∫”√”⁄»∑∂®TCP¡¨Ω”µƒISN°£\n    *   **“≥√Ê÷√ªªÀ„∑®**£∫\n        *   ◊Óº—“≥√Ê÷√ªªÀ„∑®£®OPT£©\n        *   œ»Ω¯œ»≥ˆ÷√ªªÀ„∑®£®FIFO£©\n        *    ... (252 characters truncated) ... ¥ŒŒ’ ÷°£\n    *   [¿¥‘¥2] ¡–æŸ¡ÀÀƒ÷÷“≥√Ê÷√ªªÀ„∑®£∫◊Óº—“≥√Ê÷√ªªÀ„∑®£®OPT£©°¢œ»Ω¯œ»≥ˆ÷√ªªÀ„∑®£®FIFO£©°¢◊ÓΩ¸◊Óæ√Œ¥ π”√µƒ÷√ªªÀ„∑®£®LRU£©∫Õ ±÷”“≥√Ê÷√ªªÀ„∑®°£\n    *   [¿¥‘¥3] Ã·µΩ¡À“ª∏ˆ µœ÷¡Àª˘”⁄±Íº«µƒ∑÷ÀÆ¡ÎÀ„∑®µƒ∫Ø ˝£¨∆‰÷–πÿº¸≤Ω÷Ë∞¸¿®¿˚”√æ‡¿Î±‰ªª∫ÕOTSU„–÷µ∑®°£', '[{"chunk_id": "ef647cd308ff47ed9b271456c1228dce", "document_id": "ab96d90b434e4bc6b4870a823a001455", "document_name": "Õ¯¬Á÷™ ∂µ„◊‹Ω·.pdf", "page_num": 6, " ... (809 characters truncated) ... m": null, "snippet": "putText(dst, \\"Watershed\\", Point(20, 40),\\nFONT_HERSHEY_SIMPLEX, 1.0, Scalar(0, 0, 255),...", "score": 0.5084644208006208}]', None, '2026-06-26 07:25:58.838742')
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine COMMIT
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine SELECT chat_messages.id, chat_messages.session_id, chat_messages.role, chat_messages.content, chat_messages.source_chunks, chat_messages.rewritten_query, chat_messages.created_at 
+FROM chat_messages 
+WHERE chat_messages.id = ?
+2026-06-26 15:25:58,838 INFO sqlalchemy.engine.Engine [cached since 85.63s ago] ('c7fba6d563134a2d9e8d296c88b5a06b',)
+[32m2026-06-26 15:25:58[0m | [1mINFO    [0m | [36mapp.services.chat_service[0m:[36manswer[0m:[36m220[0m - [1mŒ ¥ÕÍ≥…: session=97a654cf68b045eaac2f304a641e53d3, mode=strict, sources=3, grounded=True[0m
+INFO:     127.0.0.1:54310 - "POST /api/chat HTTP/1.1" 200 OK
+2026-06-26 15:25:58,862 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:57488 - "GET /api/chat/sessions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57490 - "DELETE /api/chat/session/non-existent-id HTTP/1.1" 405 Method Not Allowed

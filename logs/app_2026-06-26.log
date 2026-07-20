@@ -1,0 +1,110 @@
+2026-06-26 10:48:19 | INFO     | app.services.llm_service:_ensure_client:32 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 10:48:20 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 10:49:51 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 10:49:56 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 10:49:56 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=24
+2026-06-26 10:49:56 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 10:49:58 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 10:50:03 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='根据发的opencv报告，总结一下GrabCut算法的步骤...', 候选=10, 最终=5
+2026-06-26 10:50:25 | INFO     | app.services.chat_service:answer:126 - 问答完成: session=832baba64cd14d8387c0c5d03e2aba58, sources=5
+2026-06-26 13:46:53 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 13:46:53 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=strict
+2026-06-26 13:46:54 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 13:48:28 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 13:48:29 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 13:48:29 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=24
+2026-06-26 13:48:29 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 13:48:33 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 13:48:36 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='test question...', 候选=8, 最终=3
+2026-06-26 13:49:10 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=7858be6f432c48d9ba81ea0cc9f4833f, mode=strict, sources=3, grounded=True
+2026-06-26 13:49:10 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=strict
+2026-06-26 13:49:11 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='test...', 候选=4, 最终=3
+2026-06-26 13:49:44 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=fead3d33f1724192b74748ca43b640fd, mode=strict, sources=3, grounded=False
+2026-06-26 13:50:14 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=open
+2026-06-26 13:50:18 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='这个实验用了哪些图像分割算法...', 候选=12, 最终=5
+2026-06-26 13:50:28 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=42f604bc2d704fbf80d71c726da41d43, mode=open, sources=5, grounded=None
+2026-06-26 13:50:35 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=open
+2026-06-26 13:50:40 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='hi...', 候选=12, 最终=5
+2026-06-26 13:50:53 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=4c09490022a146ffbbde7c3956df0103, mode=open, sources=5, grounded=None
+2026-06-26 13:56:13 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 13:56:13 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=open
+2026-06-26 13:56:13 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 13:56:35 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 13:56:36 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 13:56:36 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=24
+2026-06-26 13:56:36 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 13:56:38 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 13:56:43 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='opencv报告中的GrabCut方法的实现过程...', 候选=12, 最终=5
+2026-06-26 13:57:01 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=14a05700cc544009bc2013d43aac5a4d, mode=open, sources=5, grounded=None
+2026-06-26 13:58:55 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=open
+2026-06-26 13:59:03 | INFO     | app.services.chat_service:answer:90 - Query rewrite: '说一下进程和线程的区别' -> '说一下进程和线程的区别'
+2026-06-26 13:59:07 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='说一下进程和线程的区别...', 候选=12, 最终=5
+2026-06-26 13:59:27 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=14a05700cc544009bc2013d43aac5a4d, mode=open, sources=5, grounded=None
+2026-06-26 14:01:42 | INFO     | app.parsers.docx_parser:parse:14 - 开始解析 DOCX: data\uploads\f9f53c068c2d47a3aa4215e864b7f388.docx
+2026-06-26 14:01:42 | INFO     | app.parsers.docx_parser:parse:46 - DOCX 解析完成: 85 段, 2841 字符, 17 个标题
+2026-06-26 14:01:43 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=ab11d13020eb43438c22299a2965e88b, chunks=5
+2026-06-26 14:01:49 | INFO     | app.parsers.pdf_parser:parse:14 - 开始解析 PDF: data\uploads\b7cbb8b10c304e49922f17a3c417d1ca.pdf
+2026-06-26 14:01:49 | INFO     | app.parsers.pdf_parser:parse:28 - PDF 解析完成: 21 页, 16637 字符
+2026-06-26 14:01:51 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=f262763b1f894066bdc004ace80bfd74, chunks=29
+2026-06-26 14:01:55 | INFO     | app.parsers.pdf_parser:parse:14 - 开始解析 PDF: data\uploads\0312d00cf93643e8a6a891c768b45313.pdf
+2026-06-26 14:01:55 | INFO     | app.parsers.pdf_parser:parse:28 - PDF 解析完成: 14 页, 6705 字符
+2026-06-26 14:01:56 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=d6309261615d4c8b8d9b366964548bd6, chunks=17
+2026-06-26 14:02:00 | INFO     | app.parsers.pdf_parser:parse:14 - 开始解析 PDF: data\uploads\cef532e2cc2b43579625cb59d6fe4ef5.pdf
+2026-06-26 14:02:00 | INFO     | app.parsers.pdf_parser:parse:28 - PDF 解析完成: 31 页, 19724 字符
+2026-06-26 14:02:03 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=e51f36d36427411081ea78a9b0e96932, chunks=52
+2026-06-26 14:02:09 | INFO     | app.parsers.pdf_parser:parse:14 - 开始解析 PDF: data\uploads\c93a8a67b3f745b3b0673b158c2a5bc9.pdf
+2026-06-26 14:02:09 | INFO     | app.parsers.pdf_parser:parse:28 - PDF 解析完成: 5 页, 3753 字符
+2026-06-26 14:02:10 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=48c2307422e7446e90e8a682fedd58bc, chunks=11
+2026-06-26 14:02:15 | INFO     | app.parsers.pdf_parser:parse:14 - 开始解析 PDF: data\uploads\e6d9c253e41c4d6095da9ae17b72e7c0.pdf
+2026-06-26 14:02:15 | INFO     | app.parsers.pdf_parser:parse:28 - PDF 解析完成: 49 页, 29159 字符
+2026-06-26 14:02:19 | INFO     | app.services.document_service:ingest:140 - 文档入库成功: id=ab96d90b434e4bc6b4870a823a001455, chunks=73
+2026-06-26 14:03:42 | INFO     | app.services.chat_service:answer:61 - 问答模式: mode=strict
+2026-06-26 14:03:49 | INFO     | app.services.chat_service:answer:90 - Query rewrite: '说一下malloc的底层原理' -> '说一下malloc的底层原理'
+2026-06-26 14:03:51 | INFO     | app.services.retrieval_service:retrieve:103 - 检索完成: query='说一下malloc的底层原理...', 候选=8, 最终=3
+2026-06-26 14:04:18 | INFO     | app.services.chat_service:answer:184 - 问答完成: session=14a05700cc544009bc2013d43aac5a4d, mode=strict, sources=3, grounded=True
+2026-06-26 15:13:06 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 15:13:06 | INFO     | app.services.semantic_cache_service:__init__:56 - 语义缓存初始化: max_size=200, threshold=0.98
+2026-06-26 15:13:06 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 15:14:32 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 15:14:52 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['本研究采用了哪些图像分割方法？', '文中图像分割部分是基于什么技术实现的？', '请介绍一下实验中使用的图像分割模型。']
+2026-06-26 15:14:52 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 15:14:52 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=211
+2026-06-26 15:14:52 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 15:15:01 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 15:15:07 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='这个实验用了哪些图像分割算法？...', queries=4, 候选=5, 最终=5
+2026-06-26 15:19:15 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['本研究采用了哪些图像分割技术？', '实验中的图像分割任务是基于什么模型来完成的？', '文中是如何对图像进行分割的？']
+2026-06-26 15:19:20 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='这个实验用了哪些图像分割算法？...', queries=4, 候选=5, 最终=5
+2026-06-26 15:19:51 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['本研究采用了哪些图像分割方法？', '实验中的图像分割部分是如何实现的？', '介绍一下文中涉及的图像分割技术。']
+2026-06-26 15:19:57 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='这个实验用了哪些图像分割算法？...', queries=4, 候选=5, 最终=5
+2026-06-26 15:21:26 | INFO     | app.services.chat_service:answer:66 - 问答模式: mode=open
+2026-06-26 15:21:39 | INFO     | app.services.chat_service:answer:66 - 问答模式: mode=open
+2026-06-26 15:23:18 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 15:23:18 | INFO     | app.services.semantic_cache_service:__init__:56 - 语义缓存初始化: max_size=200, threshold=0.98
+2026-06-26 15:23:18 | INFO     | app.services.chat_service:answer:66 - 问答模式: mode=open
+2026-06-26 15:23:18 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 15:23:36 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 15:24:01 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['Which techniques are implemented?', 'What models does this rely on?', 'Describe the underlying methodology.']
+2026-06-26 15:24:01 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 15:24:01 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=211
+2026-06-26 15:24:01 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 15:24:05 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 15:24:16 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='What algorithms are used?...', queries=4, 候选=5, 最终=5
+2026-06-26 15:24:33 | INFO     | app.services.chat_service:answer:220 - 问答完成: session=b900f0ffdb824f0a8b2e6dc903cba177, mode=open, sources=5, grounded=None
+2026-06-26 15:24:33 | INFO     | app.services.chat_service:answer:66 - 问答模式: mode=open
+2026-06-26 15:24:33 | INFO     | app.services.semantic_cache_service:lookup:124 - 语义缓存命中: query='What algorithms are used?...', score=1.0000, hit_count=1
+2026-06-26 15:24:33 | INFO     | app.services.chat_service:answer:91 - 语义缓存命中，跳过检索与 LLM 调用: session=0f4edef475b141f0ba5808fc01ebc067
+2026-06-26 15:24:55 | INFO     | app.services.semantic_cache_service:lookup:124 - 语义缓存命中: query='What algorithms are used?...', score=1.0000, hit_count=2
+2026-06-26 15:25:04 | INFO     | app.services.chat_service:answer:66 - 问答模式: mode=strict
+2026-06-26 15:25:24 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['Which methods are implemented?', 'Can you describe the underlying technical approach?', 'What is the algorithmic basis for this?']
+2026-06-26 15:25:30 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='What algorithms are used?...', queries=4, 候选=3, 最终=3
+2026-06-26 15:25:58 | INFO     | app.services.chat_service:answer:220 - 问答完成: session=97a654cf68b045eaac2f304a641e53d3, mode=strict, sources=3, grounded=True
+2026-06-26 15:30:44 | INFO     | app.services.llm_service:_ensure_client:34 - LLM 客户端初始化: provider=deepseek, model=[次]gemini-2.5-pro
+2026-06-26 15:30:44 | INFO     | app.services.semantic_cache_service:__init__:56 - 语义缓存初始化: max_size=200, threshold=0.98
+2026-06-26 15:30:45 | INFO     | app.services.embedding_service:_ensure_model:25 - 加载 Embedding 模型: models/bge-small-zh-v1.5
+2026-06-26 15:31:10 | INFO     | app.services.embedding_service:_ensure_model:32 - Embedding 模型加载完成
+2026-06-26 15:31:27 | INFO     | app.services.retrieval_service:_try_multi_query:133 - Multi-Query 生成 3 个变种: ['常见的页面淘汰算法都包括什么', '操作系统中的内存页面替换算法有哪几种', '列举几种页面置换策略']
+2026-06-26 15:31:28 | INFO     | app.services.vector_service:_ensure_index:38 - 加载已有 FAISS 索引: data\faiss_index\faiss.index
+2026-06-26 15:31:28 | INFO     | app.services.vector_service:_ensure_index:41 - FAISS 索引加载完成，维度=512, 向量数=211
+2026-06-26 15:31:28 | INFO     | app.services.rerank_service:_ensure_model:24 - 加载 Rerank 模型: models/bge-reranker-base
+2026-06-26 15:31:31 | INFO     | app.services.rerank_service:_ensure_model:34 - Rerank 模型加载完成
+2026-06-26 15:31:41 | INFO     | app.services.retrieval_service:retrieve:119 - 检索完成: query='页面置换算法有哪些...', queries=4, 候选=5, 最终=5
