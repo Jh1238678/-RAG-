@@ -1,0 +1,1 @@
+{"root":["./src/env.d.ts","./src/main.ts","./src/api/chat.ts","./src/api/document.ts","./src/api/request.ts","./src/router/index.ts","./src/stores/chat.ts","./src/stores/document.ts","./src/types/index.ts","./src/app.vue","./src/views/aboutview.vue","./src/views/chatview.vue","./src/views/documentview.vue"],"version":"5.9.3"}
