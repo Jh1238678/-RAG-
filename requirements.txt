@@ -1,0 +1,32 @@
+# Web 框架
+fastapi==0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+
+# ORM 与配置
+sqlalchemy>=2.0.25
+pydantic>=2.6.0
+pydantic-settings>=2.1.0
+
+# 文档解析
+PyMuPDF>=1.23.0
+python-docx>=1.1.0
+markdown-it-py>=3.0.0
+
+# Embedding 与检索
+sentence-transformers>=2.5.0
+faiss-cpu>=1.7.4
+FlagEmbedding>=1.2.7
+
+# LLM 接入
+openai>=1.12.0
+
+# 工具
+python-dotenv>=1.0.0
+loguru>=0.7.0
+tiktoken>=0.6.0
+
+# 测试
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.26.0

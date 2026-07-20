@@ -1,0 +1,22 @@
+Starting backend server...
+Press Ctrl+C to stop the server and kill all child processes.
+INFO:     Will watch for changes in these directories: ['D:\\AIAgent\\RAG']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [30280] using WatchFiles
+INFO:     Started server process [30728]
+INFO:     Waiting for application startup.
+2026-06-25 18:44:15,196 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-06-25 18:44:15,196 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("documents")
+2026-06-25 18:44:15,196 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-25 18:44:15,197 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chunks")
+2026-06-25 18:44:15,197 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-25 18:44:15,204 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chat_sessions")
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("chat_messages")
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("index_mapping")
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-06-25 18:44:15,205 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'req.py'. Reloading...
+ 
